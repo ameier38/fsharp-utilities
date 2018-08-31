@@ -167,8 +167,6 @@ module Result =
         | Ok _ -> None
         | Error err -> Some err
 
-    let 
-
 
 //==============================================
 // Computation Expression for Result
