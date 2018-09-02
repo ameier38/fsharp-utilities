@@ -3,16 +3,18 @@ Collection of common F# functions and types
 
 ## Files
 - [DotEnv.fs](./DotEnv.fs)
-  - F# functions for working with environment variables and secrets
+  - Functions for working with environment variables and secrets
 - [Result.fs](./Result.fs)
-  - F# types and functions for Railway Oriented Programming from Scott Wlashin's [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
+  - Types and functions for Railway Oriented Programming from Scott Wlaschin's [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
   - See specific [LICENSE](https://github.com/swlaschin/DomainModelingMadeFunctional/blob/master/LICENSE) for his
   repository.
   - I highly recommend buying the book [Domain Modeling Made Functional](https://pragprog.com/book/swdddf/domain-modeling-made-functional)
 - [SimpleType.fs](./SimpleType.fs)
-  - F# types and functions for creating simple types mostly from Scott Wlashin's [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
+  - Types and functions for creating simple types from Scott Wlaschin's [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
   - See specific [LICENSE](https://github.com/swlaschin/DomainModelingMadeFunctional/blob/master/LICENSE) for his
   repository.
+- [Currency.fs](./Currency.fs)
+  - Types and functions for working with currencies
 
 ## Usage
 1) Add [Paket](https://fsprojects.github.io/Paket/) to your project.
