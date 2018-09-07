@@ -347,6 +347,13 @@ module AsyncResult =
         | Error err -> return (Error err)
         }
 
+    /// Lift a two parameter function to use Result parameters
+    let lift2 f x1 x2 =
+        let (<!>) = map
+        let (<*>) = applyM
+        f <!> x1 <*> x2
+
+    let bind2 f x1 x2 = lift2 f x1 x2 |> bind id
 
     /// Convert a list of AsyncResult into a AsyncResult<list> using monadic style. 
     /// Only the first error is returned. The error type need not be a list.
@@ -360,7 +367,6 @@ module AsyncResult =
         // loop through the list, prepending each element
         // to the initial value
         List.foldBack consR resultList  initialValue
-
 
     /// Convert a list of AsyncResult into a AsyncResult<list> using applicative style. 
     /// All the errors are returned. The error type must be a list.
