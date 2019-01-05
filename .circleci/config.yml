@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: microsoft/dotnet:sdk
+    steps:
+      - checkout
+      - run:
+          name: Install FAKE
+          command: |
+            dotnet tool install fake-cli -g
+      - run:
+          name: Run tests
+          command: |
+            fake build
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test

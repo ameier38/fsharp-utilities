@@ -1,37 +1,41 @@
-# fsharp-common
-Collection of common F# functions and types
+# F# Utilities
+Collection of F# functions and types
 
 ## Files
-- [DotEnv.fs](./DotEnv.fs)
+- [Env.fs](./DotEnv.fs)
   - Functions for working with environment variables and secrets
 - [Result.fs](./Result.fs)
-  - Types and functions for Railway Oriented Programming from Scott Wlaschin's [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
-  - See specific [LICENSE](https://github.com/swlaschin/DomainModelingMadeFunctional/blob/master/LICENSE) for his
-  repository.
-  - I highly recommend buying the book [Domain Modeling Made Functional](https://pragprog.com/book/swdddf/domain-modeling-made-functional)
+  - Types and functions for Railway Oriented Programming from Scott Wlaschin's 
+  [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
+  - See his specific [LICENSE](https://github.com/swlaschin/DomainModelingMadeFunctional/blob/master/LICENSE).
 - [SimpleType.fs](./SimpleType.fs)
-  - Types and functions for creating simple types from Scott Wlaschin's [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
-  - See specific [LICENSE](https://github.com/swlaschin/DomainModelingMadeFunctional/blob/master/LICENSE) for his
-  repository.
+  - Types and functions for creating constrained types from Scott Wlaschin's 
+  [Domain Modeling Made Functional](https://github.com/swlaschin/DomainModelingMadeFunctional).
+  - See his specific [LICENSE](https://github.com/swlaschin/DomainModelingMadeFunctional/blob/master/LICENSE).
 - [Currency.fs](./Currency.fs)
   - Types and functions for working with currencies
 
 ## Usage
-1) Add [Paket](https://fsprojects.github.io/Paket/) to your project.
-2) Add [paket.dependencies](https://fsprojects.github.io/Paket/dependencies-file.html)
+1. Add [Paket](https://fsprojects.github.io/Paket/) to your project.
+2. Add [paket.dependencies](https://fsprojects.github.io/Paket/dependencies-file.html)
 file to your project.
-3) Add a reference to the file you would like to use. For example, 
-add the [Result.fs](./Result.fs) file in the paket.dependencies file:
+3. Add a reference to the file you would like to use. For example, 
+add the [Result.fs](./Result.fs) file in the `paket.dependencies` file:
     ```
     source https://www.nuget.org/api/v2
 
-    github ameier38/fsharp-common Result.fs
+    github ameier38/fsharp-utilities Result.fs
     ```
-4) Install dependencies
+4. Add the dependency to the `paket.references` file:
+    ```
+    File: Result.fs
+    ```
+5. Install dependencies
     ```
     $ ./.paket/paket.exe install
     ```
 
-## Similar Projects
+## Resources
+- [Domain Modeling Made Functional book](https://pragprog.com/book/swdddf/domain-modeling-made-functional)
 - [haf/YoLo](https://github.com/haf/YoLo)
-- [FSharpPlus](https://github.com/fsprojects/FSharpPlus)
+- [Paket GitHub dependencies](https://fsprojects.github.io/Paket/github-dependencies.html)
