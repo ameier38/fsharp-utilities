@@ -6,11 +6,15 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Setup Environment Variables
+          command: |
+            echo 'export PATH="/root/.dotnet/tools:$PATH"' >> $BASH_ENV
+      - run:
           name: Install FAKE
           command: |
             dotnet tool install fake-cli -g
       - run:
-          name: Run tests
+          name: Run Tests
           command: |
             fake build
 workflows:
