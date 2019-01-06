@@ -11,7 +11,6 @@ open System.IO
 
 let paketEndpoint = "https://github.com/fsprojects/Paket/releases/download/5.194.4/paket.exe"
 let paketExe = Path.Combine(__SOURCE_DIRECTORY__, ".paket", "paket.exe")
-let paketCommand = if Environment.isLinux then "mono " + paketExe else paketExe
 
 Target.create "Install" (fun _ ->
     if not (File.Exists paketExe) then
@@ -27,7 +26,6 @@ Target.create "Install" (fun _ ->
     |> CreateProcess.ensureExitCode
     |> Proc.run
     |> ignore)
-    
 
 Target.create "Test" (fun _ ->
     let (exitCode, messages) = 
