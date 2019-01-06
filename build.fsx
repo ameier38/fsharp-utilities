@@ -21,9 +21,13 @@ Target.create "Install" (fun _ ->
     else
         Trace.trace "Paket already exists"
     Trace.trace "Installing dependencies"
-    match Shell.Exec (paketCommand, "install") with
-    | 0 -> Trace.trace "Successfully installed dependencies"
-    | _ -> failwith "Failed to install dependencies")
+    Command.RawCommand(paketExe, Arguments.OfArgs ["install"])
+    |> CreateProcess.fromCommand
+    |> CreateProcess.withFramework
+    |> CreateProcess.ensureExitCode
+    |> Proc.run
+    |> ignore)
+    
 
 Target.create "Test" (fun _ ->
     let (exitCode, messages) = 
