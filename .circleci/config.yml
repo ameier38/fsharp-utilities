@@ -2,7 +2,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: microsoft/dotnet:sdk
+      - image: ameier38/dotnet-mono
     steps:
       - checkout
       - run:

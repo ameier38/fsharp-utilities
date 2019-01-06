@@ -11,6 +11,7 @@ open System.IO
 
 let paketEndpoint = "https://github.com/fsprojects/Paket/releases/download/5.194.4/paket.exe"
 let paketExe = Path.Combine(__SOURCE_DIRECTORY__, ".paket", "paket.exe")
+let paketCommand = if Environment.isLinux then "mono " + paketExe else paketExe
 
 Target.create "Install" (fun _ ->
     if not (File.Exists paketExe) then
@@ -20,7 +21,7 @@ Target.create "Install" (fun _ ->
     else
         Trace.trace "Paket already exists"
     Trace.trace "Installing dependencies"
-    match Shell.Exec (paketExe, "install") with
+    match Shell.Exec (paketCommand, "install") with
     | 0 -> Trace.trace "Successfully installed dependencies"
     | _ -> failwith "Failed to install dependencies")
 

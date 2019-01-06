@@ -1,7 +1,7 @@
 #if !FAKE
 #r "netstandard"
 #endif
-#r @"packages\Expecto\lib\netstandard2.0\Expecto.dll"
+#r @"packages/Expecto/lib/netstandard2.0/Expecto.dll"
 #load "src/Env.fs"
 
 open Expecto
