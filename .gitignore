@@ -1,0 +1,9 @@
+## VS Code ##
+.vscode
+
+## FAKE ##
+.fake
+
+## Paket ##
+packages
+paket-files
