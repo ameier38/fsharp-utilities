@@ -1,5 +1,7 @@
 # F# Utilities
-Collection of F# functions and types
+[![CircleCI](https://circleci.com/gh/ameier38/fsharp-utilities.svg?style=svg)](https://circleci.com/gh/ameier38/fsharp-utilities)
+____
+Collection of F# utilities.
 
 ## Files
 - [Env.fs](./DotEnv.fs)
@@ -33,6 +35,20 @@ add the [Result.fs](./Result.fs) file in the `paket.dependencies` file:
 5. Install dependencies
     ```
     $ ./.paket/paket.exe install
+    ```
+
+## Development
+1. Install [FAKE](https://github.com/fsharp/FAKE). See 
+[this post](https://andrewcmeier.com/how-to-fake) for a tutorial
+on getting started with FAKE.
+2. Clone the repo.
+    ```
+    > git clone https://github.com/ameier38/fsharp-utilities.git
+    ```
+3. Make your updates.
+4. Run the tests.
+    ```
+    > fake build
     ```
 
 ## Resources
