@@ -1,5 +1,5 @@
 # F# Utilities
-[![CircleCI](https://circleci.com/gh/ameier38/fsharp-utilities.svg?style=svg)](https://circleci.com/gh/ameier38/fsharp-utilities)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/ameier38/ameier38%2Ffsharp-utilities%2Ffsharp-utilities?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWMzMjE0ODA3YTJkOGI3ZjkxMzVhZjlm.WFn4I6XuUDBfWsKEp6LIuG-IlDsT4JCDTjMzeH7kGu8&type=cf-1)]( https://g.codefresh.io/pipelines/fsharp-utilities/builds?repoOwner=ameier38&repoName=fsharp-utilities&serviceName=ameier38%2Ffsharp-utilities&filter=trigger:build~Build;branch:master;pipeline:5c7913b8b3d43d6068fa0cf8~fsharp-utilities)
 ____
 Collection of F# utilities.
 
