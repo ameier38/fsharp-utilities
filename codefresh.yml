@@ -4,8 +4,7 @@ stages:
 steps:
   test_fsharp_utilities:
     stage: test
-    type: test
     title: Test F# utilities
     image: ameier38/dotnet-mono:2.2
     commands:
-      - fake build
+      - fake build -t Test
