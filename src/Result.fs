@@ -303,6 +303,10 @@ type AsyncResult<'Success,'Failure> =
 [<RequireQualifiedAccess>]  // RequireQualifiedAccess forces the `AsyncResult.xxx` prefix to be used
 module AsyncResult =
 
+    /// Pass in a function to handle each case of `Result`
+    let bimap onSuccess onError (xR:AsyncResult<_,_>) = 
+        Async.map (Result.bimap onSuccess onError) xR
+
     /// Lift a function to AsyncResult
     let map f (x:AsyncResult<_,_>) : AsyncResult<_,_> =
         Async.map (Result.map f) x
