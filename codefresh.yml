@@ -7,4 +7,5 @@ steps:
     title: Test F# utilities
     image: ameier38/dotnet-mono:2.2
     commands:
+      - rm -rf .fake
       - fake build -t Test
