@@ -1,8 +1,8 @@
 version: '1.0'
 steps:
-  install_dependencies:
-    title: Install dependencies
+  run_tests:
+    title: Run tests
     image: ameier38/dotnet-mono-sdk:2.1
     commands:
       - fake build -n -t InstallDependencies
-      - fake run tests.fsx
+      - fake run test.fsx
