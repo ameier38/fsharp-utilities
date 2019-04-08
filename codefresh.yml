@@ -8,5 +8,5 @@ steps:
   run_tests:
     title: Run tests 
     image: fsharp
-    commands:
+    cmd:
       - test.fsx
