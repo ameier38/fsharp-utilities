@@ -1,9 +1,4 @@
-#r "paket:
-nuget Fake.DotNet.Cli
-nuget Fake.DotNet.Fsi
-nuget Fake.IO.FileSystem
-nuget Fake.Core.Target
-nuget FSharp.Core 4.5.0.0 //"
+#r "paket: groupref Fake //"
 #load "./.fake/build.fsx/intellisense.fsx"
 
 open Fake.Core

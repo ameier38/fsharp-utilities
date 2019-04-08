@@ -1,11 +1,8 @@
 version: '1.0'
-stages:
-  - test
 steps:
   test_fsharp_utilities:
-    stage: test
     title: Test F# utilities
-    image: ameier38/dotnet-mono:2.2
+    image: mcr.microsoft.com/dotnet/core/sdk:2.1
     commands:
-      - rm -rf .fake
+      - dotnet tool install fake-cli -g
       - fake build -t Test

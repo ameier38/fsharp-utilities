@@ -16,6 +16,8 @@ Collection of F# utilities.
   - See his specific [LICENSE](https://github.com/swlaschin/DomainModelingMadeFunctional/blob/master/LICENSE).
 - [Currency.fs](./Currency.fs)
   - Types and functions for working with currencies
+- [State.fs](./State.fs)
+  - Implementation of State monad with builder
 
 ## Usage
 1. Add [Paket](https://fsprojects.github.io/Paket/) to your project.
