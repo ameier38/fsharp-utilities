@@ -2,7 +2,7 @@ version: '1.0'
 steps:
   test_fsharp_utilities:
     title: Test F# utilities
-    image: mcr.microsoft.com/dotnet/core/sdk:2.1
+    image: ameier38/dotnet-mono-sdk:2.1
     commands:
       - dotnet tool install fake-cli -g
       - export PATH="$PATH:/root/.dotnet/tools"

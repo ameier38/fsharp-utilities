@@ -27,9 +27,11 @@ Target.create "InstallDependencies" (fun _ ->
 
 Target.create "Test" (fun _ ->
     let (exitCode, messages) = 
-        Fsi.exec 
+        Fsi.exec
             // profile configuration
-            (fun p -> { p with TargetProfile = Fsi.Profile.NetStandard } ) 
+            (fun p -> 
+                { p with 
+                    TargetProfile = Fsi.Profile.NetStandard } ) 
             // script to run
             "test.fsx" 
             // script arguments
