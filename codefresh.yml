@@ -4,6 +4,4 @@ steps:
     title: Test F# utilities
     image: ameier38/dotnet-mono-sdk:2.1
     commands:
-      - dotnet tool install fake-cli -g
-      - export PATH="$PATH:/root/.dotnet/tools"
       - fake build -t Test
