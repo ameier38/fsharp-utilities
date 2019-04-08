@@ -4,10 +4,5 @@ steps:
     title: Install dependencies
     image: ameier38/dotnet-mono-sdk:2.1
     commands:
-      - fake build -t InstallDependencies
-  run_tests:
-    title: Run tests 
-    image: fsharp
-    commands:
-      - ls
-      - fsharpi test.fsx
+      - fake build -n -t InstallDependencies
+      - fake run tests.fsx
