@@ -5,4 +5,5 @@ steps:
     image: mcr.microsoft.com/dotnet/core/sdk:2.1
     commands:
       - dotnet tool install fake-cli -g
+      - export PATH="$PATH:/root/.dotnet/tools"
       - fake build -t Test
