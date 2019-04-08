@@ -1,11 +1,13 @@
 version: '1.0'
-stages:
-  - test
 steps:
-  test_fsharp_utilities:
-    stage: test
-    title: Test F# utilities
-    image: ameier38/dotnet-mono:2.2
+  install_dependencies:
+    title: Install dependencies
+    image: ameier38/dotnet-mono-sdk:2.1
     commands:
-      - rm -rf .fake
-      - fake build -t Test
+      - fake build -t InstallDependencies
+  run_tests:
+    title: Run tests 
+    image: fsharp
+    commands:
+      - ls
+      - fsharpi test.fsx
