@@ -1,3 +1,4 @@
+#r "paket: groupref main //"
 #if !FAKE
 #r "netstandard"
 #endif
